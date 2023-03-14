@@ -4,7 +4,7 @@
 
 // Return the value of what she should be paying.
 
-let monthlyPayment = 100;
+let monthlyPayment = Math.floor(Math.random() * 101);
 
 const mariaPayments = (transaction) =>
   (transaction * 1.01 + 3) * monthlyPayment;
