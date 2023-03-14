@@ -4,9 +4,17 @@
 
 // Return the value of what she should be paying.
 
-let monthlyPayment = Math.floor(Math.random() * 101);
+let monthlyTransaction = Math.floor(Math.random() * 101);
+let costPerT = Math.random().toFixed(1) * 501;
 
-const mariaPayments = (transaction) =>
-  (transaction * 1.01 + 3) * monthlyPayment;
+const mariaPayments = (transaction) => {
+  transaction = costPerT;
+  if (transaction <= 500) {
+    let actualCost = (transaction * 1.01 + 3) * monthlyTransaction;
+    console.log(actualCost);
+  } else {
+    return "Your transaction is invalid.";
+  }
+};
 
-console.log(mariaPayments(500));
+mariaPayments();
