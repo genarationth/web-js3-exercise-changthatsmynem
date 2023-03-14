@@ -4,6 +4,9 @@
 
 // Return the value of what she should be paying.
 
-const mariaPayments = (transaction) => transaction * 1.01 + 3;
+let monthlyPayment = 100;
+
+const mariaPayments = (transaction) =>
+  (transaction * 1.01 + 3) * monthlyPayment;
 
 console.log(mariaPayments(500));
